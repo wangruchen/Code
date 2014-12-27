@@ -1,0 +1,5 @@
+主函数是similaritycalculation.m。
+EachImageSimilarity.m是计算每幅图像与其GroundTruth之间的相似度。
+EachMethodSimilarity.m是将每种方法中所有图像的相似度放在一列数组中。
+ImagePathGroundTruth.m存放的GroundTruth图的路径。
+ImagePathMethods.m存放的是8种方法图像的路径。

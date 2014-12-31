@@ -1,1 +1,0 @@
-	1Canny	2ITS	3Otsu	4MET	5Kmeans	6Salient	7Remove	8Watershed 

@@ -1,6 +1,6 @@
-function EachImageData=EachImageSimilarity( strGroundTruth,idsGroundTruth,strMethod,idsMethod,ImageNum )%计算每幅图像的相似度
-imgdir1 = strcat( strGroundTruth,idsGroundTruth(ImageNum).name ); 
-imgdir2 = strcat( strMethod,idsMethod(ImageNum).name );  
+function EachImageData=EachImageSimilarity( GroundTruthFilePath,IdsGroundTruthImage,MethodsFilePath,ImagesName,ImageNumber )%计算每幅图像的相似度
+imgdir1 = strcat( GroundTruthFilePath,IdsGroundTruthImage(ImageNumber).name ); 
+imgdir2 = strcat( MethodsFilePath,ImagesName{ImageNumber}.name);  
 GroundTruth=imread(imgdir1); 
 EachMethod=imread(imgdir2); 
 EdgeGroundTruth=edge(GroundTruth,'canny'); 
@@ -27,7 +27,6 @@ t=0;
           end 
       end 
   end  
- %%%%%%  
   tt=0; 
     for tt1=1:xEdgeEachMethod 
         for tt2=1:yEdgeEachMethod 

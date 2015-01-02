@@ -57,7 +57,7 @@ for n=1:ImageQuantity%数组第一列存放图片的标号
     SimilarityData(n,1)=n;
 end
 %%
-FileExist=exist(DataTxt);%判断是否有data.txt,如果有就删掉
+FileExist=exist(DataTxt,'file');%判断是否有data.txt,如果有就删掉
 if FileExist==2;
     delete(DataTxt);
 end

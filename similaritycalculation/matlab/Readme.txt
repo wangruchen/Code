@@ -1,0 +1,2 @@
+运行similaritycalculation.m计算出每种方法下图像与其GroundTruth图之间的相似度。
+如果需要计算你的方法得到的图像与GroundTruth图间的相似度，可以将这些方法得到的图片放在method文件夹下，替换掉里面的方法。

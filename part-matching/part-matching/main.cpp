@@ -23,13 +23,13 @@ int main(int argc, char* argv[])
     Mat partIm=imread(path2);
     Mat result;
     
-    matchTemplate(srcIm, partIm, result, TM_SQDIFF);
+    matchTemplate(srcIm, partIm, result, TM_SQDIFF);//TM_SQDIFF可以选用不同的方法
     normalize(result, result, 0, 1, NORM_MINMAX);
     double minVal,maxVal;
     Point minPoi,maxPoi;
     minMaxLoc(result, & minVal, &maxVal, &minPoi, &maxPoi);
     
-    rectangle(srcIm, minPoi, Point2f(minPoi.x+partIm.cols,minPoi.y+partIm.rows), Scalar(255,0,0));
+    rectangle(srcIm, minPoi, Point2f(minPoi.x+partIm.cols,minPoi.y+partIm.rows), Scalar(0,0,255));
     imshow("result", srcIm);
     waitKey(0);
     return 0;
